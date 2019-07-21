@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	min-width: auto;
+	height: 100px;
+	background-color: #3f51b5;
+}
+.header a{
+	cursor: pointer;
+}
+.header img{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+.header span{
+	margin-left: 20px;
+	color: #fefcff;
+	font-size: 20px;
+	line-height: 100px;
+}
