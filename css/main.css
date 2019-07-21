@@ -21,3 +21,33 @@
 	font-size: 20px;
 	line-height: 100px;
 }
+#data-list li{
+	list-style: none;
+	min-width: auto;
+	height: 80px;
+	margin: 20px 20px 0 20px;
+	/*margin-left: 20px;
+	margin-top: 10px;*/
+	box-shadow: 1px 1px 5px 1px #d7d7d7;
+}
+#data-list img{
+	float: left;
+	width: 30px;
+	height: 30px;
+	border-radius: 90px;
+	margin: 10px 10px 5px 10px;
+}
+.login{
+	float: left;
+	min-width: auto;
+	height: 20px;
+	color: #606060;
+	font-size: 14px;
+	margin-top: 13px;
+}
+.full_name{
+	float: left;
+	margin: 45px 20px 0 -80px;
+	font-size: 16px;
+	font-weight: 600;
+}

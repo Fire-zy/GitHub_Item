@@ -5,12 +5,13 @@ var datalist = new Vue({
     items: []
   },
   created:function(){
+  	var self=this;
   	fetch('https://api.github.com/users/Fire-zy/repos')
 		.then(function(response){
 			return response.json();
 		})
 		.then(function(myJson){
-			this.items = myJson;
+			self.items = myJson;
 		});	
 			
   }
