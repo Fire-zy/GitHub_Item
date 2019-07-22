@@ -2,7 +2,7 @@
 var datalist = new Vue({
   el: '#data-list',
   data: {
-    items: {}
+    items: []
   }, 
   created:function(){
   	var self=this;
@@ -16,7 +16,7 @@ var datalist = new Vue({
 	},
 	methods:{
 		onRepoClick(name){
-			window.location.href ='./Version_Libraries.html';
+      window.location.href = './Version_Libraries.html?name=' + name
 		}
 	}
 })
