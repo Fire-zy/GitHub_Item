@@ -2,18 +2,51 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>公开的版本库</title>
+		<link rel="stylesheet" href="css/details.css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>	
 	</head>
 	<body>
-		<div id="version_libraries">
-			<ul id="libraries">
-				<li v-for="item in items">
-					{{item.name}}
-				</li>
-			</ul>
+		<div class="version_libraries">
+			<!--<div class="img" :style="background:background"+'url('+'item.owner.avatar_url'+')'></div>-->
+			<div id="libraries">			
+				<p id="name">{{item.name}}</p>	
+				<p>language  {{item.language}}</p>
+			</div>			
+			<div id="navigator">
+				<span>信息</span>
+				<span>文件</span>
+				<span>提交</span>
+				<span>活动</span>
+			</div>
+			
+			<div id="update">
+				<p id="full_name">{{item.full_name}}</p>
+				<div id="count">
+					<p>{{item.open_issues_count}}</p>
+					<p>问题</p>
+				</div>
+				<div id="count">
+					<p>0</p>
+					<p>星标</p>
+				</div>
+				<div id="count">
+					<p>{{item.forks_count}}</p>
+					<p>版本库分支</p>
+				</div>
+				<div id="count">
+					<p>0</p>
+					<p>关注者</p>
+				</div>				
+			</div>
+			
+			<div id="describe">
+				没有描述
+			</div>
 		</div>
-	
+		
+		
 		<script src="js/libraries.js"></script>
 	</body>
 </html>

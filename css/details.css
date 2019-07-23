@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#libraries{
+	min-width: auto;
+	height: 150px;
+	background-color: #5868b5;
+	color: #FEFCFF;
+}
+#libraries p{
+	float: left;
+	width: 200px;
+	height: 20px;
+	margin: 70px 0 -55px 33px;
+	font-weight: 500;
+}
+#name{
+	font-size: 22px;
+}
+#navigator{
+	min-width: auto;
+	height: 50px;
+	background-color: #3f51b5;
+}
+#navigator span{
+	margin:0 30px 0 30px;	
+	width:50px;
+	height: 50px;
+	color: #FEFCFF;
+	font-size: 18px;
+	line-height: 50px;
+}
+#update{
+	min-width: auto;
+	height:120px;
+	margin: 10px 10px 0 10px;
+	box-shadow: 1px 1px 5px 1px #d7d7d7;
+}
+#count{
+	margin-top: 25px;
+	float: left;
+	width: 98px;
+	height: 70px;
+	text-align: center;
+	line-height: 25px;
+}
+#full_name{
+	float: left;
+	width: 350px;
+	height: 20px;
+	margin: 13px 0 0 18px;
+	font-size: 18px;
+	color: #656565;
+}
+#describe{
+	min-width: auto;
+	height:80px;
+	margin: 10px 10px 0 10px;
+	box-shadow: 1px 1px 5px 1px #d7d7d7;
+	color: #676767;
+}

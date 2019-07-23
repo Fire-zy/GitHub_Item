@@ -16,7 +16,7 @@ var datalist = new Vue({
 	},
 	methods:{
 		onRepoClick(name){
-			window.location.href = "http://127.0.0.1:8020/GitHub_Item/Version_Libraries.html?__hbt=1563779701771";
+			window.location.href='./Version_Libraries.html';
 		}
 	}
 })

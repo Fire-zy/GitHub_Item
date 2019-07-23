@@ -1,7 +1,7 @@
 var libraries=new Vue({
-	el:'#libraries',
+	el:'.version_libraries',
 	data:{
-		items:[]
+		item:{}
 	},
 	created:function(){
 		var self=this;
@@ -10,7 +10,7 @@ var libraries=new Vue({
 			return response.json();
 		})
 		.then(function(myJson){
-			self.items=myJson;
+			self.item=myJson;
 		});
 	}
 })
