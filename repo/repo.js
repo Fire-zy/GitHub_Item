@@ -16,7 +16,10 @@ var datalist = new Vue({
 	},
 	methods:{
 		onRepoClick(name){
-			window.location.href='./Version_Libraries.html';
+			window.location.href = './repos.html?name=' + name
+		},
+		onUserClick(login){
+			window.location.href = '../user/user.html?longin=' + login
 		}
 	}
 })

@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title></title>
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="../css/repo.css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>	
 	</head>
 
@@ -12,7 +12,7 @@
 		<!--导航栏开始-->
 		<div class="header">
 			<a class="menu-button">
-				<img src="img/menu-button.png" />
+				<img src="../img/menu-button.png" />
 			</a>
 			<span>动态</span>
 		</div>
@@ -20,14 +20,15 @@
 		
 		<div class="list">
 			<ul id="data-list">
-			  <li v-for="item in items" @click="onRepoClick(item.full_name)">
-			  	<img :src="item.owner.avatar_url"/>
+			  <li v-for="item in items">
+			  	<img :src="item.owner.avatar_url" @click="onUserClick(item.owner.login)"/>
 			  	<span class="login">{{item.owner.login}}</span>				
-				<p class="full_name">{{item.full_name}}</p>
+				<p class="full_name"  @click="onRepoClick(item.full_name)">{{item.full_name}}</p>
 			  </li>
 			</ul>
 		</div>
+		
+	<script src="repo.js"></script>
 	
-	<script src="js/common.js"></script>
 	</body>
 </html>

@@ -4,8 +4,13 @@ var libraries=new Vue({
 		item:{}
 	},
 	created:function(){
+		var search = location.search
+		var name;
+    	if (search) {
+			name = search.split('=')[1]
+    	}
 		var self=this;
-		fetch('https://api.github.com/repos/Fire-zy/Curriculum-Design')
+		fetch('https://api.github.com/repos/'+name)
 		.then(function(response){
 			return response.json();
 		})

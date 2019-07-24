@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="../css/user.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>	
+	</head>
+	<body>
+		<div class="user">
+			<div class="header">
+				<img :src="item.avatar_url" />
+				<p class="login">{{item.login}}</p>
+				<p>加入时间 2019-4-6</p>
+			</div>
+			<div class="navigator">
+				<span>信息</span>
+				<span>活动</span>
+				<span>星标</span>
+			</div>
+			<div class="update">
+				<p class="login2">{{item.login}}</p>
+				<div class="followers">
+					<p>{{item.followers}}</p>
+					<p>跟随者</p>
+				</div>
+				<div class="following">
+					<p>{{item.following}}</p>
+					<p>跟随</p>
+				</div>
+				<div class="public_repos">
+					<p>{{item.public_repos}}</p>
+					<p>版本库</p>
+				</div>
+			</div>
+		</div>
+		<script src="user.js"></script>
+	</body>
+</html>
