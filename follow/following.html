@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>跟随</title>
+		<link rel="stylesheet" href="../css/follow.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>	
+	</head>
+	<body>
+		<div class="following">
+			<div class="header">
+				<p>跟随</p>
+			</div>
+			<ul class="followes_list">
+				<li v-for="item in items">
+					<img :src="item.avatar_url" @click="onFollowingClick(item.login)"/>
+					<p @click="onFollowingClick(item.login)">{{item.login}}</p>
+				</li>
+			</ul>
+		</div>
+		<script src="following.js"></script>
+	</body>
+</html>

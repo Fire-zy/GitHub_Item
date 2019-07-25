@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	min-width: auto;
+	height: 70px;
+	background-color: #3F51B5;
+}
+.header p{
+	float: left;
+	color: #FEFCFF;
+	font-size: 20px;
+	margin: 5px 0 0 40px;
+}
+.followes_list li{
+	list-style: none;
+	min-width: auto;
+	height: 80px;
+	margin: 10px 10px 0 10px;
+	box-shadow: 1px 1px 5px 1px #d7d7d7;
+}
+.followes_list img{
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin: 18px 5px 0 10px;
+	border-radius: 90px 90px;
+}
+.followes_list p{
+	line-height: 80px;
+}
