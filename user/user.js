@@ -24,6 +24,12 @@ var user=new Vue({
 		},
 		onFollowingClick(following){
 			window.location.href='../follow/following.html?following=' + following
+		},
+		onEventsClick(login){
+			window.location.href='../events/events.html?login=' + login
+		},
+		onstarredClick(login){
+			window.location.href='../starred/starred.html?login=' + login
 		}
 	}
 })

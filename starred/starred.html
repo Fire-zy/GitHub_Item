@@ -19,22 +19,16 @@
 				<span @click="onEventsClick(item.login)">活动</span>
 				<span @click="onstarredClick(item.login)">星标</span>
 			</div>
-			<div class="update">
-				<p class="login2">{{item.login}}</p>
-				<div class="followers">
-					<p>{{item.followers}}</p>
-					<p @click="onFollowersClick(item.login)">跟随者</p>
-				</div>
-				<div class="following">
-					<p>{{item.following}}</p>
-					<p @click="onFollowingClick(item.login)">跟随</p>
-				</div>
-				<div class="public_repos">
-					<p>{{item.public_repos}}</p>
-					<p>版本库</p>
-				</div>
-			</div>
 		</div>
-		<script src="user.js"></script>
+		<ul class="starred">
+				<li v-for="item in starreds">
+					<img :src="item.owner.avatar_url" class="avatar"/>	
+					<span class="name">{{item.name}}</span>
+					<span class="language">{{item.language}}</span>
+					<p class="description">{{item.description}}</p>
+					<img src="../img/星标.png" class="star"/>		
+				</li>
+			</ul>
+		<script src="starred.js"></script>
 	</body>
 </html>
