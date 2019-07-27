@@ -38,5 +38,5 @@ var starred=new Vue({
 		.then(function(myJson){
 			self.starreds=myJson;
 		});
-	}	
+	}
 })

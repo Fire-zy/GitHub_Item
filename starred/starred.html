@@ -16,17 +16,31 @@
 			</div>
 			<div class="navigator">
 				<span>信息</span>
-				<span @click="onEventsClick(item.login)">活动</span>
-				<span @click="onstarredClick(item.login)">星标</span>
+				<span>活动</span>
+				<span class="stars">星标</span>
 			</div>
 		</div>
 		<ul class="starred">
 				<li v-for="item in starreds">
-					<img :src="item.owner.avatar_url" class="avatar"/>	
-					<span class="name">{{item.name}}</span>
-					<span class="language">{{item.language}}</span>
-					<p class="description">{{item.description}}</p>
-					<img src="../img/星标.png" class="star"/>		
+					<div class="avatar-box">
+						<img :src="item.owner.avatar_url" class="avatar"/>	
+					</div>
+					<div class="desc-box">
+						<div>
+							<span class="name">{{item.name}}</span>
+							<span class="language">{{item.language}}</span>
+						</div>						
+						<p class="description">{{item.description}}</p>
+						<div class="oepration">
+							<img src="../img/star.png"/>
+							<span>{{item.stargazers_count}}</span>
+							<img src="../img/fork.png" />
+							{{item.forks_count}}
+							<img src="../img/people.png" class="people"/>
+							{{item.owner.login}}
+						</div>
+											
+					</div>							
 				</li>
 			</ul>
 		<script src="starred.js"></script>
