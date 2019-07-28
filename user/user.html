@@ -10,7 +10,7 @@
 	<body>
 		<div class="user">
 			<div class="header">
-				<img :src="item.avatar_url" />
+				<img :src="item.avatar_url"/>
 				<p class="login">{{item.login}}</p>
 				<p>加入时间 {{item.created_at}}</p>
 			</div>
@@ -31,7 +31,7 @@
 				</div>
 				<div class="public_repos">
 					<p>{{item.public_repos}}</p>
-					<p>版本库</p>
+					<p  @click="onRepoClick(item.login)">版本库</p>
 				</div>
 			</div>
 		</div>

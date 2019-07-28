@@ -21,9 +21,13 @@
 		<div class="list">
 			<ul id="data-list">
 			  <li v-for="item in items">
-			  	<img :src="item.owner.avatar_url" @click="onUserClick(item.owner.login)"/>
-			  	<span class="login">{{item.owner.login}}</span>				
-				<p class="full_name"  @click="onRepoClick(item.full_name)">{{item.full_name}}</p>
+			  	<div class="img_box">
+			  		<img :src="item.owner.avatar_url" @click="onUserClick(item.owner.login)"/>	
+			  	</div>			  	
+			  	<div class="content_box">
+			  		<span class="login">{{item.owner.login}}</span>				
+					<p class="full_name"  @click="onRepoClick(item.full_name)">{{item.full_name}}</p>
+			  	</div>		  	
 			  </li>
 			</ul>
 		</div>

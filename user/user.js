@@ -30,6 +30,9 @@ var user=new Vue({
 		},
 		onstarredClick(login){
 			window.location.href='../starred/starred.html?login=' + login
+		},
+		onRepoClick(login){
+			window.location.href='../repo/repo.html?login=' + login
 		}
 	}
 })

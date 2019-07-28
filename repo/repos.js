@@ -17,5 +17,10 @@ var libraries=new Vue({
 		.then(function(myJson){
 			self.item=myJson;
 		});
+	},
+	methods:{
+		onIssuesClick(login,name){
+			window.location.href='../issues/issues.html?login=' + login +'&name=' +name
+		}
 	}
 })

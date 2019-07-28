@@ -25,10 +25,10 @@
 				<p class="full_name">{{item.full_name}}</p>
 				<div class="count">
 					<p>{{item.open_issues_count}}</p>
-					<p>问题</p>
+					<p @click="onIssuesClick(item.owner.login,item.name)">问题</p>
 				</div>
 				<div class="count">
-					<p>0</p>
+					<p>{{item.stargazers_count}}</p>
 					<p>星标</p>
 				</div>
 				<div class="count">
