@@ -10,14 +10,24 @@
 }
 .navigator{
 	min-width: auto;
-	height: 50px;
+	height: 70px;
 	background-color: #3f51b5;
 }
-.update{
-	min-width: auto;
-	height:120px;
-	margin: 10px 10px 0 10px;
-	box-shadow: 1px 1px 5px 1px #d7d7d7;
+.img_box{
+	float: left;
+	width: 60px;
+	height: 50px;
+	text-align: center;
+	margin: 0 10px 0 52px;
+}
+.img_box img{
+	width:25px;
+	height: 25px;
+	margin-top: 10px;
+}
+.img_box p{
+	color: #FEFCFF;
+	font-size: 14px;
 }
 .header img{
 	float: left;
@@ -32,14 +42,11 @@
 	height: 25px;
 	margin: 60px 0 -54px 25px;
 }
-.navigator span{
-	width: 200px;
-	height: 20px;
-	color: #FEFCFF;
-	font-size: 20px;
-	font-weight: 300;
-	line-height: 50px;
-	margin-left: 70px;
+.update{
+	min-width: auto;
+	height:120px;
+	margin: 10px 10px 0 10px;
+	box-shadow: 1px 1px 5px 1px #d7d7d7;
 }
 .login{
 	font-size: 22px;
@@ -57,6 +64,42 @@
 	height: 50px;
 	margin: 60px 0 0 28px;
 }
+
+
+/*events*/
+.eventsList img{
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-radius: 90px;
+	margin: 10px 10px 5px 10px;
+}
+.eventsList li{
+	list-style: none;
+	min-width: auto;
+	height: 120px;
+	margin: 10px 10px 0 10px;
+	box-shadow: 1px 1px 5px 1px #d7d7d7;
+}
+.eventsList span{
+	float: left;
+	margin: 20px 50px 0 -46px;
+}
+.eventsList_name{
+	width: 200px;
+	font-weight: 600;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.eventsList_login{
+	float: left;
+	width: 250px;
+	margin-top: 20px;
+}
+
+
+
 
 /*starred样式*/
 .starred li{

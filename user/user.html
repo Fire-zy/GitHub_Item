@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title></title>
+		<title>user</title>
 		<link rel="stylesheet" href="../css/user.css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>	
 	</head>
@@ -14,26 +14,78 @@
 				<p class="login">{{item.login}}</p>
 				<p>加入时间 {{item.created_at}}</p>
 			</div>
-			<div class="navigator">
-				<span>信息</span>
-				<span @click="onEventsClick(item.login)">活动</span>
-				<span @click="onstarredClick(item.login)">星标</span>
+			<!--导航栏开始-->
+			<div class="navigator">	
+				<div class="img_box">
+					<img src="../img/people_pic1.png" id="im0"/>
+					<p>用户</p>
+				</div>
+				<div class="img_box">
+					<img src="../img/activity_pic1.png" id="im1"/>
+					<p>活动</p>
+				</div>
+				<div class="img_box">
+					<img src="../img/star_pic1.png" id="im2"/>
+					<p>星标</p>
+				</div>				
 			</div>
-			<div class="update">
-				<p class="login2">{{item.login}}</p>
-				<div class="followers">
-					<p>{{item.followers}}</p>
-					<p @click="onFollowersClick(item.login)">跟随者</p>
-				</div>
-				<div class="following">
-					<p>{{item.following}}</p>
-					<p @click="onFollowingClick(item.login)">跟随</p>
-				</div>
-				<div class="public_repos">
-					<p>{{item.public_repos}}</p>
-					<p  @click="onRepoClick(item.login)">版本库</p>
+			<!--导航栏结束-->
+			
+			<!--更新内容开始-->
+			<div class="tab_box">
+				<div class="update">
+					<p class="login2">{{item.login}}</p>
+					<div class="followers">
+						<p>{{item.followers}}</p>
+						<p @click="onFollowersClick(item.login)">跟随者</p>
+					</div>
+					<div class="following">
+						<p>{{item.following}}</p>
+						<p @click="onFollowingClick(item.login)">跟随</p>
+					</div>
+					<div class="public_repos">
+						<p>{{item.public_repos}}</p>
+						<p  @click="onRepoClick(item.login)">版本库</p>
+					</div>
 				</div>
 			</div>
+
+			<div class="tab_box">
+				<ul class="eventsList">
+					<li v-for="eventsListItem in events">
+						<img :src="eventsListItem.actor.avatar_url" />
+						<p class="eventsList_login">{{eventsListItem.actor.login}}</p>				
+						<span class="branch">提交到分支在</span>
+						<span class="eventsList_name">{{eventsListItem.repo.name}}</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="tab_box">
+				<ul class="starred">
+					<li v-for="starreditem in starreds">
+						<div class="avatar-box">
+							<img :src="starreditem.owner.avatar_url" class="avatar"/>	
+						</div>
+						<div class="desc-box">
+							<div>
+								<span class="name">{{starreditem.name}}</span>
+								<span class="language">{{starreditem.language}}</span>
+							</div>						
+							<p class="description">{{starreditem.description}}</p>
+							<div class="oepration">
+								<img src="../img/star.png"/>
+								<span>{{starreditem.stargazers_count}}</span>
+								<img src="../img/fork.png" />
+								{{starreditem.forks_count}}
+								<img src="../img/people.png" class="people"/>
+								{{starreditem.owner.login}}
+							</div>												
+						</div>							
+					</li>
+				</ul>
+			</div>
+			<!--更新内容结束-->
 		</div>
 		<script src="user.js"></script>
 	</body>

@@ -2,19 +2,19 @@
 	margin: 0;
 	padding: 0;
 }
-.libraries{
+.header{
 	min-width: auto;
 	height: 150px;
 	background-color: #5868b5;
 	color: #FEFCFF;
+	overflow: hidden;
 }
-.libraries p{
+.content_box{
+	width: 85%;
+	margin: 67px 0 0 35px;
 	float: left;
-	width: 200px;
-	height: 20px;
-	margin: 70px 0 -55px 33px;
-	font-weight: 500;
 }
+
 .name{
 	font-size: 22px;
 }
@@ -55,7 +55,7 @@
 }
 .describe{
 	min-width: auto;
-	height:80px;
+	min-height: 50px;
 	margin: 10px 10px 0 10px;
 	box-shadow: 1px 1px 5px 1px #d7d7d7;
 	color: #676767;
