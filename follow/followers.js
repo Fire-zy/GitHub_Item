@@ -2,7 +2,7 @@ var followers=new Vue({
 	el:'.followers',
 	data:{
 		items:[]
-	},
+	}, 
 	created:function(){
 		var search = location.search
 		var followers;
@@ -24,3 +24,4 @@ var followers=new Vue({
 		}
 	}
 })
+
