@@ -6,6 +6,7 @@
 		<title></title>
 		<link rel="stylesheet" href="../css/login.css" />
 		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>	
+		<!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
 	</head>
 	<body>
 		<div class="login">
@@ -21,7 +22,7 @@
 				<img src="../img/pw.png" />
 				<input type="text" class="inputpw" />
 			</div>
-			<div id="button">
+			<div id="button" @click="onLoginClick()">
 				登陆
 			</div>
 		</div>
